@@ -1,0 +1,43 @@
+1)Authentication: who are you??
+signing in /signing out/ verifying passwords
+
+i)Form based: email/password stored in DB.
+ii)Oauth: Login using facebook, google etc accounts.
+iii)Single Sign on.
+.... and many more.
+
+2)Authorization: who can see what
+permissions/ access controls
+
+3)Sign Up: 
+i)check the email is already in use.
+ii)hash the user's password with bcrypt.
+iii)store the email and hashed passwords in the database.
+
+4) difference between url,path and route.
+
+example:http://localhost:4000/auth
+ans) a)url is the complete string in the url bar. the above example is an url.
+b)path is the anything after the the port number or the domain name is a path. in the above example "/auth" is the
+path.
+c)route defines the path along with the path and the http request intended for it. in above example "/auth" might
+make a get request or a post request etc.
+
+5) use of dev dependencies. 
+ans) Things that you don't require in the production code is kept in dev dependecy. its only useful in development
+mode.
+
+
+
+Checklist:
+1)Authentication
+i)Create server.(index.js).
+ii)Add Auth Router.
+iii)Create a user with POST request to auth/signup.
+    a)Validate required fields
+
+project related issues:
+
+1)very important to install nodemon as dev dependency using npm i --save-dev.
+2)Importing express.Router, make sure its express.Router() and not just express.Router. It throws a nasty error.
+3)body-parser comes inbuilt no need of installing it explicitly.
